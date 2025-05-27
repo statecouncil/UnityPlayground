@@ -92,8 +92,8 @@ public class FirstPersonController : MonoBehaviour
 
     void Look()
     {
-        float mouseX = lookInput.x * lookSpeed;
-        float mouseY = lookInput.y * lookSpeed;
+        float mouseX = lookInput.x * lookSpeed * Time.deltaTime;
+        float mouseY = lookInput.y * lookSpeed * Time.deltaTime;
 
         // Rotate the player (horizontal rotation)
         Vector3 yRotation = new Vector3(0, 1 * mouseX, 0);
